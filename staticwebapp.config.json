@@ -1,13 +1,12 @@
 {
   "routes": [
     {
-      "route": "/secure/*",
+      "route": "/*",
       "allowedRoles": ["authenticated"]
     },
     {
       "route": "/login",
-      "rewrite": "/.auth/login/aad",
-      "allowedRoles": ["anonymous"]
+      "rewrite": "/.auth/login/aad"
     },
     {
      "route": "/logout",
@@ -20,10 +19,6 @@
     {
       "route": "/.auth/login/github",
       "statusCode": 404
-    },
-    {
-      "route": "/.auth/login/aad",
-      "allowedRoles": ["anonymous"]
     }
   ],
   "responseOverrides": {
